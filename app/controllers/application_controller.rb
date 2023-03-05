@@ -2,15 +2,15 @@ class ApplicationController < Sinatra::Base
   set default_content_type: "application/json"
   
   post '/login' do
-    # Find the user (mail)
+    # Find the user by email
     user = User.find_by(email: params[:email])
 
-    # Verify password
+    # Verify the password
     if user && user.authenticate(params[:password])
       # Generate a session token
       session_token = SecureRandom.hex
 
-      # Update the user's session token in the db
+      # Update the user's session token in the database
       user.update(session_token: session_token)
 
       # Return the session token as a response
@@ -19,17 +19,20 @@ class ApplicationController < Sinatra::Base
       halt 401, { message: 'Invalid email or password' }.to_json
     end
   end
-     # User sign up route
+
+  # User sign up route
   post '/signup' do
-     # Create a new user from the request parameters
+    # Create a new user from the request parameters
     user = User.create(
       email: params[:email],
       password: params[:password],
       name: params[:name]
     )
+
     # Return the new user's details as a response
     user.to_json
   end
+  #get request to access all the pets
   #GET request to get all the pets
   get '/pets' do
     # get all the pets from the database
@@ -51,6 +54,8 @@ class ApplicationController < Sinatra::Base
     pet.to_json
 
   end
+  
+
   #available pets
   get '/pets/available' do
     # Retrieve all available pets
@@ -59,6 +64,7 @@ class ApplicationController < Sinatra::Base
     # Return the details of the available pets
     pets.to_json
   end 
+
 
   #search with name or breed
   get '/pets/search' do
@@ -98,3 +104,4 @@ class ApplicationController < Sinatra::Base
     { message: 'The pet has been removed.' }.to_json
   end
 end
+
