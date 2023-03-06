@@ -1,138 +1,88 @@
-# Phase 3 Project Guidelines
+# Phase-3-final-project-pet-finder-server
+# Description
 
-## Learning Goals
+- This is a backend server for a petfinder app, it is built with ruby with sinatra.
 
-- Build a web basic API with Sinatra and Active Record to support a React
-  frontend
+# Getting Started
 
-## Introduction
+- In order to use this repo you need to have the following installed:
 
-Congrats on getting through all the material for Phase 3! Now's the time to put
-it all together and build something from scratch to reinforce what you know and
-expand your horizons.
+ - OS [either: Windows 10+, Linux or MacOS
 
-The focus of this project is **building a Sinatra API backend** that uses
-**Active Record** to access and persist data in a database, which will be used
-by a separate **React frontend** that interacts with the database via the API.
+- Ruby - 3.1.+
 
-## Requirements
+# Installation
+- To use this repo on your machine requires some simple steps
 
-For this project, you must:
+# Alternative One
 
-- Use Active Record to interact with a database.
-- Have at least two models with a one-to-many relationship.
-- At a minimum, set up the following API routes in Sinatra:
-  - create and read actions for both models
-  - full CRUD capability for one of the models: 
-  The update action should be implemented using a form that is 
-  pre-filled with existing values for the object. On submission of 
-  the form, the object should update. Note: Using a like button or 
-  similar will not meet the update requirement.
-- Build a separate React frontend application that interacts with the API to
-  perform CRUD actions.
-- Implement proper front end state management. You should be updating state using a
-  setState function after receiving your response from a POST, PATCH, or DELETE 
-  request. You should NOT be relying on a GET request to update state. 
-- Use good OO design patterns. You should have separate classes for each of your
-  models, and create instance and class methods as necessary. 
-- Routes in your application (both client side and back end) should follow RESTful
-  conventions.
-- Use your back end optimally. Pass JSON for related associations to the front 
-  end from the back end. You should use active record methods in your controller to grab
-  the needed data from your database and provide as JSON to the front end. You
-  should NOT be relying on filtering front end state or a separate fetch request to
-  retrieve related data.
+- Open a terminal / command line interface on your computer
 
-For example, build a todo list application with a React frontend interface and a
-Sinatra backend API, where a user can:
+- Clone the repo by using the following:
 
-- **Create** a new todo
-- **Read** a list of all todos
-- **Update** an individual todo
-- **Delete** a todo
+        -  git@github.com:DOROTHY2322/Phase-3-final-project-pet-finder-server.git
 
-A `Todo` can be tagged with a `Category`, so that each todo _belongs to_ a
-category and each category _has many_ todos.
+- Change directory to the repo folder:
 
-## Getting Started
+        - cd Phase-3-final-project-pet-finder-server.git
 
-### Backend Setup
+- Open it in Visual Studio Code
 
-This repository has all the starter code needed to get a Sinatra backend up and
-running. [**Fork and clone**][fork link] this repository to get started. Then, run
-`bundle install` to install the gems.
+         - code .
 
-**Important**: Be sure you fork a copy of the repo into your GitHub account
-before cloning it. You can do this by using the link above or by clicking the
-"Octocat" button at the top of this page, then clicking "Fork" in the upper
-right corner of the repo page.
+(Alternate Option) Open it in any editor of your choice.
 
-[fork link]: https://github.com/learn-co-curriculum/phase-3-sinatra-react-project/fork
+# Alternative Two
 
-The `app/controllers/application_controller.rb` file has an example GET route
-handler. Replace this route with routes for your project.
+- On the top right corner of this page there is a button labelled Fork.
 
-You can start your server with:
+- Click on that button to fork the repo to your own account.
 
-```console
-$ bundle exec rake server
-```
+- Take on the process in Alternative One above.
 
-This will run your server on port
-[http://localhost:9292](http://localhost:9292).
+- Remember to replace your username when cloning.
 
-### Frontend Setup
+        - git@github.com:DOROTHY2322/Phase-3-final-project-pet-finder-server.git
 
-Your backend and your frontend should be in **two different repositories**.
+# Project SetUp
 
-Create a new repository in a **separate folder** with a React app for your
-frontend. To do this, `cd` out of the backend project directory, and use
-[create-react-app][] to generate the necessary code for your React frontend:
+- This project is built with Sinatra Api application.
+- To run and acces a server in our Terminal:
+    
+- Ensure you have a gemfile where all dependencies for or project require to run and install our dependencies
 
-```console
-$ npx create-react-app my-app-frontend
-```
+          - Bundle install
 
-After creating the project locally, you should also
-[create a repository on GitHub][create repo] to host your repo and help
-collaborate, if you're working with a partner.
+  - To run our server 
 
-### Fetch Example
+            - bundle exec rake server  
 
-Your React app should make fetch requests to your Sinatra backend! Here's an
-example:
+  - This project has been rendered in render.com has a live status which we use the given url to fetch data  in our frontend:
 
-```js
-fetch("http://localhost:9292/test")
-  .then((r) => r.json())
-  .then((data) => console.log(data));
-```
+            - https://dorothy-sinatra-petfinder.onrender.com   
 
-## Project Tips
 
-- This project is intended to focus more on the backend than the frontend, so
-  try and keep the React side of things relatively simple. Focus on working with
-  Active Record and performing CRUD actions. What are some interesting queries you can write? What kinds of questions can you ask of your data?
-- Once you have a project idea, come up with a domain model and decide what
-  relationships exist between the models in your application. Use a tool like
-  [dbdiagram.io][] to help visualize your models.
-- Decide on your API endpoints. What data should they return? What kind of CRUD
-  action should they perform? What data do they need from the client?
-- Use [Postman][postman download] to test your endpoints.
-- Use `binding.pry` to debug your requests on the server. It's very helpful to use a
-  `binding.pry` in your controller within a route to see what `params` are being
-  sent.
-- Use the [Network Tab in the Dev Tools][network tab] in the frontend to debug
-  your requests.
+- Front end Repository
 
-## Resources
+        - https://github.com/DOROTHY2322/phase--3-petfinder-client
 
-- [create-react-app][]
-- [dbdiagram.io][]
-- [Postman][postman download]
+ - Our frontend has a frontend live page to access:
 
-[create-react-app]: https://create-react-app.dev/docs/getting-started
-[create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
-[dbdiagram.io]: https://dbdiagram.io/
-[postman download]: https://www.postman.com/downloads/
-[network tab]: https://developer.chrome.com/docs/devtools/network/
+         -  https://phase-3-petfinder-client.vercel.app
+          
+
+# Technologies used
+
+- Ruby
+
+# Authors
+
+- This project was contributed to by:
+
+- KENRICK NGETICH
+
+# License
+- MIT License
+
+- Copyright (c) 2023 KENRICK NGETICH
+
