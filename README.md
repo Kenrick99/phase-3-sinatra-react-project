@@ -1,4 +1,4 @@
-# Phase-3-final-project-pet-finder-server
+# Phase-3-final-project-pet-finder
 # Description
 
 - This is a backend server for a petfinder app, it is built with ruby with sinatra.
@@ -20,7 +20,7 @@
 
 - Clone the repo by using the following:
 
-        -  git@github.com:DOROTHY2322/Phase-3-final-project-pet-finder-server.git
+        -  git@github.com:Kenrick99/phase-3-sinatra-react-project.git
 
 - Change directory to the repo folder:
 
@@ -42,7 +42,7 @@
 
 - Remember to replace your username when cloning.
 
-        - git@github.com:DOROTHY2322/Phase-3-final-project-pet-finder-server.git
+        - git@github.com:Kenrick99/phase-3-sinatra-react-project.git
 
 # Project SetUp
 
@@ -59,16 +59,16 @@
 
   - This project has been rendered in render.com has a live status which we use the given url to fetch data  in our frontend:
 
-            - https://dorothy-sinatra-petfinder.onrender.com   
+            - h 
 
 
 - Front end Repository
 
-        - https://github.com/DOROTHY2322/phase--3-petfinder-client
+        - 
 
  - Our frontend has a frontend live page to access:
 
-         -  https://phase-3-petfinder-client.vercel.app
+         -  
           
 
 # Technologies used
