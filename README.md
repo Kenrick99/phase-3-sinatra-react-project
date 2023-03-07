@@ -59,12 +59,12 @@
 
   - This project has been rendered in render.com has a live status which we use the given url to fetch data  in our frontend:
 
-            - h 
+            - https://kenrick-sinatra-frontend.onrender.com
 
 
 - Front end Repository
 
-        - 
+        - https://github.com/Kenrick99/pet-finder-frontend
 
  - Our frontend has a frontend live page to access:
 

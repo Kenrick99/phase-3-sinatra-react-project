@@ -1,6 +1,5 @@
 class ApplicationController < Sinatra::Base
   set default_content_type: "application/json"
-  enable :sessions
   
   post '/login' do
     # Find the user by email
@@ -105,4 +104,3 @@ class ApplicationController < Sinatra::Base
     { message: 'The pet has been removed.' }.to_json
   end
 end
-
